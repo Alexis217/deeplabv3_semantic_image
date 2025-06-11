@@ -1,52 +1,40 @@
-# 🧠 DeepLab - Segmentación Semántica de Imágenes
+# DeepLab - Segmentación Semántica con Cámara
 
-Este proyecto implementa un sistema interactivo de segmentación semántica utilizando el modelo **DeepLab** con TensorFlow.js. Los usuarios pueden cargar una imagen y aplicar segmentación usando diferentes datasets entrenados (Pascal, Cityscapes, ADE20K).
+Este proyecto es una aplicación web que utiliza modelos pre-entrenados de DeepLab para realizar **segmentación semántica** en tiempo real usando la cámara de tu dispositivo. Permite seleccionar entre tres modelos diferentes: Pascal, Cityscapes y ADE20K.
 
----
+## ¿Qué es la segmentación semántica?
 
-## 📸 Ejemplo de uso
+La segmentación semántica es una técnica de visión por computadora que asigna una etiqueta de clase a cada píxel de una imagen, permitiendo identificar objetos y regiones dentro de una escena.
 
-1. Selecciona un modelo de la lista desplegable.
-2. Carga una imagen desde tu dispositivo o con una de la carpeta assets.
-3. Haz clic en **Segmentar imagen** para ver el resultado.
+## ¿Cómo funciona la aplicación?
 
----
+1. **Captura de imagen:** Utiliza la cámara web para capturar una imagen.
+2. **Selección de modelo:** Puedes elegir entre tres modelos de segmentación (Pascal, Cityscapes, ADE20K).
+3. **Procesamiento:** El modelo seleccionado procesa la imagen y genera un mapa de segmentación.
+4. **Visualización:** Se muestra el resultado en un canvas junto con una leyenda de colores para cada clase detectada.
 
-## 🧰 Tecnologías utilizadas
+## Archivos principales
 
-- ⚙️ [TensorFlow.js](https://www.tensorflow.org/js)
-- 🎨 HTML5, CSS3
-- 🖼️ Canvas API
-- 🔍 Modelos pre-entrenados DeepLab
+- **index.html:** Estructura de la página web, incluye los botones, el video de la cámara y los contenedores para los resultados.
+- **style.css:** Estilos visuales para la interfaz.
+- **script.js:** Lógica principal de la aplicación. Gestiona la cámara, la carga y ejecución de los modelos, y la visualización de resultados.
 
----
+## Requisitos
 
-## 🚀 Cómo ejecutar
+- Navegador moderno con soporte para JavaScript y acceso a la cámara.
+- Conexión a internet para cargar los modelos de TensorFlow.js.
 
-1. Clona este repositorio:
+## Instrucciones de uso
 
-```bash
-git clone https://github.com/Alexis217/deeplabv3_semantic_image.git
-```
+1. Abre `index.html` en tu navegador.
+2. Permite el acceso a la cámara cuando el navegador lo solicite.
+3. Haz clic en uno de los botones de modelo para realizar la segmentación.
+4. Observa el resultado y la leyenda de clases segmentadas.
 
-2. Abre `index.html` en tu navegador favorito.
+## Créditos
 
-3. ¡Listo! Ya puedes probar la segmentación semántica.
-
-> ⚠️ **Nota:** El modelo puede tardar unos segundos en cargarse, cada modelo se debe cargar antes de usar.
-
----
-
-## 👥 Colaboradores
-
-Este proyecto fue desarrollado por un equipo de 5 colaboradores:
-
-- 👤 [Alexis Albarenga](https://github.com/Alexis217)
-- 👤 [Nahuel Sanchez](https://github.com/carlosNahuelSanchez)
-- 👤 [Felix Avila](https://github.com/avilafelix998)
-- 👤 [Lucas Esteche](https://github.com/EstecheLucas)
-- 👤 [Leandro Speit](https://github.com/LeanSpeit)
-
-¡Gracias por su dedicación y trabajo en equipo!
+- [TensorFlow.js DeepLab Model](https://github.com/tensorflow/tfjs-models/tree/master/deeplab)
+- Inspirado en ejemplos de segmentación semántica en tiempo real.
 
 ---
+
